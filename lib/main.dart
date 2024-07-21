@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<void> sendRequestAndReceiveResponse() async {
     final String inputText = _textEditingController.text;
     String promptText =
-        "Give a brief uplifting and caring reply that sounds like emotional support from a friend for the following text message (use appropriate emojies too): '$inputText', in the context of my previous input: '$respo', and your previous response: '$respoo'";
+        "Give a brief uplifting and caring reply that sounds like emotional support from a friend for the following text message (use appropriate emojies too, don't repeat the response): '$inputText', in the context of my previous input: '$respo', and your previous response: '$respoo'";
     final Map<String, dynamic> requestBody = {
       "prompt": {"text": promptText},
       "temperature": 0.9,
