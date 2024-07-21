@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
   String respoo="";
   String respo = "hi"; // Initialize with the default message
   final String apiKey =
-      'AIzaSyD7wEUxE4zNpOmQxlqf4EynzxrtBx5JieE'; // Replace with your actual API key
+      'AIzaSyA1OTGTtMrXuDT_wzPm3pdh3bl5LkOkb0k'; // Replace with your actual API key
   final String apiUrl =
       'https://generativelanguage.googleapis.com/v1beta2/models/text-bison-001:generateText';
 
@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<void> sendRequestAndReceiveResponse() async {
     final String inputText = _textEditingController.text;
     String promptText =
-        "Give a brief uplifting and caring reply that sounds like emotional support from a friend for the following text message: '$inputText', in the context of my previous input: '$respo', and your previous response: '$respoo'";
+        "Give a brief uplifting and caring reply that sounds like emotional support from a friend for the following text message (use appropriate emojies too): '$inputText', in the context of my previous input: '$respo', and your previous response: '$respoo'";
     final Map<String, dynamic> requestBody = {
       "prompt": {"text": promptText},
       "temperature": 0.9,
